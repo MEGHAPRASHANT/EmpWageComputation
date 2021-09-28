@@ -1,5 +1,6 @@
 echo "welcome all"
 isPresentFullTime=0
+isPresentPartTime=1
 isAbsent=2
 salaryPerHr=20
 day=1
@@ -9,6 +10,10 @@ do
    if [ $randomNumber -eq $isPresentFullTime ]
    then
      empHr=8
+ elif  [ $randomNumber -eq $isPresentPartTime ]
+   then
+     empHr=8
+
    else
      empHr=0
    fi
