@@ -1,19 +1,20 @@
 echo "welcome all"
-isFullTime=1
-isPartTime=2
+isFullTime=0
+isPartTime=1
+isAbsent=2
 salaryPerHr=20
-empCheck=$((RANDOM%3));
-case $empCheck in
-	$isFullTime)
-		empHrs=8
-		;;
-	$isPartTime)
-		empHrs=4
-		;;
-	*)
-	empHrs=0;
-		;;
-esac
-salary=$(($empHrs*xy
-$empRateHr));
-echo $salary
+for((day=0;day<20;day++))
+do
+  randomNumber=$((RANDOM%3))
+  if [ $randomNumber -eq $isFullTime ]
+  then
+     empHr=8
+   elif [ $randomNumber -eq $isPartTime ]
+   then
+      empHr=4
+   else
+       empHr=0
+    fi
+   totalSalary=$((totalSalary*(salaryPerHr*empHr)))
+done
+echo "Salary is:" $totalSalary
